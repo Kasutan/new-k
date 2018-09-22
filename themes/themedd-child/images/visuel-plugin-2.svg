@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="264.58334mm"
+   height="264.58334mm"
+   viewBox="0 0 264.58334 264.58334"
+   version="1.1"
+   id="svg3908"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="visuel-plugin-2.svg"
+   inkscape:export-filename="D:\dev en cours bureau\dev_mondial_relay\themes\themedd-child\images\visuel-plugin-2-100.png"
+   inkscape:export-xdpi="9.5999994"
+   inkscape:export-ydpi="9.5999994">
+  <defs
+     id="defs3902">
+    <linearGradient
+       inkscape:collect="always"
+       id="Mondial_Relay">
+      <stop
+         style="stop-color:#ca0047;stop-opacity:1"
+         offset="0"
+         id="stop2524" />
+      <stop
+         style="stop-color:#fdb390;stop-opacity:1"
+         offset="1"
+         id="stop2526" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Mondial_Relay"
+       id="linearGradient2530"
+       x1="-278.94641"
+       y1="350.67264"
+       x2="24.190468"
+       y2="247.86311"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0174419,0,0,0.9615385,-136.47,-28.611284)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-139.99992"
+     inkscape:cy="392.51701"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="246"
+     inkscape:window-y="1072"
+     inkscape:window-maximized="1"
+     showguides="false" />
+  <metadata
+     id="metadata3905">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-85.422615,-108.0119)">
+    <rect
+       style="fill:url(#linearGradient2530);fill-opacity:1;stroke:none;stroke-width:0.26169813;stroke-opacity:1"
+       id="rect2522"
+       width="264.58334"
+       height="264.58334"
+       x="-372.59525"
+       y="85.422615"
+       transform="rotate(-90)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3921"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.65853905,0,0,0.65853905,17.16664,36.947125)"><flowRegion
+         id="flowRegion3923"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
+           id="rect3925"
+           width="314.2218"
+           height="292.34451"
+           x="145.71428"
+           y="174.28578"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3927"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1">Mondial Relay</flowPara><flowPara
+         id="flowPara3931"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1" /></flowRoot>    <path
+       id="path4752"
+       d="M 243.41375,295.62929 221.30668,286.43 c 0,0 0,0 0,0 -2.2107,-0.91991 -4.97409,-0.91991 -7.46114,0 l -22.10706,9.19929 c -2.76339,1.14999 -4.42142,3.44979 -4.42142,5.9796 v 21.84839 c 0,2.5298 1.65803,5.05969 4.69775,6.20959 l 22.10708,9.1993 c 1.10535,0.45982 2.48705,0.69016 3.59239,0.69016 1.3817,0 2.48705,-0.23034 3.5924,-0.69016 l 22.10707,-9.1993 c 2.76338,-1.1499 4.69776,-3.44979 4.69776,-6.20959 v -21.84839 c 0,-2.52981 -1.65803,-4.82961 -4.69776,-5.9796 z m -26.80481,-5.2896 c 0.27635,-0.23034 0.82895,-0.23034 1.10534,-0.23034 0.55272,0 0.82897,0 1.10535,0.23034 l 20.44905,8.5094 -7.73747,3.21979 -21.5544,-8.96939 z m 1.10534,17.47879 -21.55439,-8.96939 7.73747,-3.2198 21.5544,8.96939 z m -23.48876,17.93869 c -0.82895,-0.45982 -1.38169,-1.3799 -1.38169,-2.0699 v -21.15848 l 22.10707,9.19939 v 22.5383 z m 46.70119,0 -20.44905,8.50931 v -22.5383 l 22.10707,-9.19939 v 21.15848 c 0,0.91991 -0.55271,1.6099 -1.65802,2.0699 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.52097559;stroke-opacity:0.94117647" />
+    <path
+       id="path4777"
+       d="m 227.17313,209.42104 h -8.10759 v -8.10759 c 0,-0.81076 -0.54049,-1.3513 -1.35125,-1.3513 -0.81077,0 -1.35127,0.54054 -1.35127,1.3513 v 8.10759 h -8.10759 c -0.81076,0 -1.35127,0.54049 -1.35127,1.35125 0,0.81076 0.54051,1.35125 1.35127,1.35125 h 8.10759 v 8.10759 c 0,0.81076 0.5405,1.3513 1.35127,1.3513 0.81076,0 1.35125,-0.54054 1.35125,-1.3513 v -8.10759 h 8.10759 c 0.81077,0 1.35128,-0.54049 1.35128,-1.35125 0,-0.81076 -0.54051,-1.35125 -1.35128,-1.35125 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.35126507" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3921-3"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.65853905,0,0,0.65853905,18.600759,120.14915)"><flowRegion
+         id="flowRegion3923-8"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
+           id="rect3925-6"
+           width="314.2218"
+           height="292.34451"
+           x="145.71428"
+           y="174.28578"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3931-4"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:40.00000381px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1">WooCommerce</flowPara></flowRoot>  </g>
+</svg>

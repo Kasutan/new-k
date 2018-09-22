@@ -1,0 +1,349 @@
+/*
+Theme Name:     Themedd-child
+Theme URI:      
+Description:    Themedd child theme for Kasutan.
+Author:         Magalie Castaing
+Author URI:     
+Template:       themedd
+Version:        2.0
+*/
+body {
+	overflow-x: hidden;
+	--gris: #f4f4fa;
+	--bleu: #66F;
+	--violet: #CE9FFC;
+	--gradient: linear-gradient(135deg, #CE9FFC 10%, #66F 100%);
+
+}
+
+header .site-title {
+	font-size: 1.5rem;
+}
+
+header #site-header-secondary-menu {
+	font-size: 1rem;
+}
+
+.home .page-header {
+	display: none;
+}
+
+#main.site-main {
+	padding: 0;
+}
+
+.entry-content h2 {
+	color: var(--bleu);
+	font-size: 40px;
+}
+
+.entry-content h3 {
+	color: var(--bleu);
+}
+
+.entry-content h2+h3 {
+	margin-top: 0;
+}
+
+hr.gradient {
+	border-bottom: 0;
+	height: 5px;
+	background: var(--gradient);
+	max-width: 800px;
+	margin: auto;
+}
+
+/***************************************************************
+    Boutons et liens
+/***************************************************************/
+a.bouton {
+	color: #fff;
+	/*background:var(--violet);*/
+	background: linear-gradient(135deg, #CE9FFC 30%, #66F 100%);
+
+	display: block;
+	padding: 20px;
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+a.bouton:hover,
+a.bouton:focus,
+a.bouton:visited {
+	color: #fff;
+	/*background: var(--bleu);*/
+	background: linear-gradient(135deg, #CE9FFC 50%, #66F 100%);
+
+}
+
+button {
+	border: none;
+}
+
+/***************************************************************
+    Listes
+/***************************************************************/
+.entry-content .wp-block-column ul {
+	list-style: none;
+	margin: 0;
+}
+
+.entry-content .wp-block-column li {
+	margin-bottom: 0.5rem;
+}
+
+.entry-content .wp-block-column li:before {
+	content: ' ';
+	display: inline-block;
+	background-image: url('https://icongr.am/clarity/circle.svg?size=12&color=6666ff');
+	background-repeat: none;
+	width: 12px;
+	height: 12px;
+	margin-right: 10px;
+}
+
+/***************************************************************
+    Hero 
+/***************************************************************/
+.hero .ab-container-content {
+	background-image: var(--gradient);
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	min-height: 30vw;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 20px 10px;
+}
+
+.hero h2 {
+	flex-basis: 70%;
+}
+
+.hero p {
+	flex-basis: 90%;
+	flex-shrink: 0;
+	max-width: 800px;
+}
+
+.hero h2,
+.hero p {
+	color: #fff;
+	margin-top: 0;
+}
+
+.hero p {
+	font-size: 1.2em;
+}
+
+.hero strong {
+	background-color: #fff;
+	color: #66F;
+	font-size: 0.9em;
+	font-weight: normal;
+	padding: 0 3px 2px;
+
+}
+
+@media screen and (min-width:768px) {
+	.hero img {
+		flex-basis: 10%;
+	}
+}
+
+/***************************************************************
+    Section nos valeurs / nos engagements 
+/***************************************************************/
+
+.valeur .ab-container-content {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+
+}
+
+.valeur .img {
+	flex-basis: 20%;
+	flex-shrink: 0;
+}
+
+.valeur .ab-container-content>div {
+	flex-basis: 70%;
+
+}
+
+.valeur:nth-of-type(2n+1) .ab-container-content {
+	background: #66F;
+	color: #fff;
+}
+
+.valeur:nth-of-type(2n+1) h3 {
+	color: #fff;
+
+}
+
+
+@media screen and (min-width:768px) {
+
+	.valeur .ab-container-content {
+		flex-direction: row;
+		max-width: 800px !important;
+		padding: 20px;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+/***************************************************************
+    Section qui sommes-nous 
+/***************************************************************/
+.qui .ab-container-inside {
+	background-color: var(--gris);
+	padding: 40px 20px;
+
+}
+
+.qui h2,
+.qui h3 {
+	color: initial;
+}
+
+.entry-content .qui h3 {
+	margin-top: 0;
+}
+
+.rond img {
+	border-radius: 50%;
+}
+
+.wp-block-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 6%;
+}
+
+.wp-block-column figure {
+	max-width: 200px;
+}
+
+.social {
+	margin-top: 20px;
+}
+
+.social a {
+	margin: 5px;
+}
+
+/***************************************************************
+    Section témoignages 
+/***************************************************************/
+.temoignage {
+	max-width: 700px;
+	margin: auto;
+	padding: 20px 20px 0;
+}
+
+.temoignage .nom {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.temoignage blockquote {
+	border-left-color: var(--gris);
+}
+
+button.gauche,
+button.droite {
+	display: none;
+}
+
+@media screen and (min-width:768px) {
+	.temoignages {
+		position: relative;
+	}
+
+	button.gauche,
+	button.droite {
+		display: block;
+		position: absolute;
+		font-weight: bold;
+		top: calc(50% - 25px);
+		padding: 10px;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background-color: var(--gris);
+		border-width: 0px !important;
+		color: initial;
+		transition: all linear 0.8s;
+	}
+
+	button.gauche {
+		left: 10%;
+	}
+
+	button.droite {
+		right: 10%;
+	}
+}
+
+
+/***************************************************************
+    Footer
+/***************************************************************/
+footer .footer-widgets .widget {
+	margin-bottom: 0;
+}
+
+footer .site-info {
+	padding-top: 0;
+}
+
+/***************************************************************
+    Formulaire de reccherche
+/***************************************************************/
+
+.search-form {
+	max-width: 600px;
+	margin: 30px auto;
+}
+
+.search-form input.search-field,
+.search-form button.search-submit {
+	background: #fff;
+	height: 60px;
+}
+
+
+.search-form button.search-submit {
+	margin-left: 10px;
+}
+
+/***************************************************************
+    Reutilisable
+/***************************************************************/
+.grille {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.grille>div {
+	flex-basis: 100%;
+	margin: 30px 0;
+}
+
+@media screen and (min-width:768px) {
+	.grille>div {
+		flex-basis: 500px;
+		flex-grow: 0;
+		margin: 30px 10px;
+
+	}
+}
