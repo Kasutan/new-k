@@ -13,6 +13,8 @@ body {
 	--bleu: #66F;
 	--violet: #CE9FFC;
 	--gradient: linear-gradient(135deg, #CE9FFC 10%, #66F 100%);
+	--noir: #222222;
+	--bleu-transparent : rgba(102,102,255,0.9);
 
 }
 
@@ -37,9 +39,7 @@ header #site-header-secondary-menu {
 	font-size: 40px;
 }
 
-.entry-content h3 {
-	color: var(--bleu);
-}
+
 
 .entry-content h2+h3 {
 	margin-top: 0;
@@ -56,6 +56,23 @@ hr.gradient {
 /***************************************************************
     Boutons et liens
 /***************************************************************/
+#site-header-secondary-menu a:focus {
+	color:var(--bleu);
+}
+.entry-content a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  transition: all .2s ease-out;
+  background: linear-gradient(var(--violet), var(--violet));
+  background-size: 100% .2em;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+}
+.entry-content a:focus, .entry-content a:active {
+    background-color: var(--violet) ;
+    color: inherit; 
+}
 a.bouton {
 	color: #fff;
 	/*background:var(--violet);*/
@@ -72,11 +89,15 @@ a.bouton {
 
 a.bouton:hover,
 a.bouton:focus,
-a.bouton:visited {
+a.bouton:visited,
+a.bouton:active {
 	color: #fff;
 	/*background: var(--bleu);*/
 	background: linear-gradient(135deg, #CE9FFC 50%, #66F 100%);
-
+	outline:none !important;
+}
+a.bouton:focus {
+	border:solid 1px var(--noir);
 }
 
 button {
@@ -175,7 +196,9 @@ button {
 	flex-basis: 70%;
 
 }
-
+.valeur h3 {
+	color: var(--bleu);
+}
 .valeur:nth-of-type(2n+1) .ab-container-content {
 	background: #66F;
 	color: #fff;
@@ -203,13 +226,12 @@ button {
 /***************************************************************/
 .qui .ab-container-inside {
 	background-color: var(--gris);
-	padding: 40px 20px;
+	padding: 3.24rem 20px;
 
 }
 
-.qui h2,
-.qui h3 {
-	color: initial;
+.qui h2 {
+	color: var(--noir);
 }
 
 .entry-content .qui h3 {
@@ -237,6 +259,12 @@ button {
 
 .social a {
 	margin: 5px;
+	background:none;
+	outline:initial;
+}
+.social a:focus {
+	background:none;
+	outline:solid 1px var(--noir);
 }
 
 /***************************************************************
@@ -291,7 +319,12 @@ button.droite {
 		right: 10%;
 	}
 }
-
+/*
+Portfolio
+*/
+.portfolio .ab-container-content {
+	padding:3.24rem 20px;
+}
 
 /***************************************************************
     Footer
@@ -323,6 +356,112 @@ footer .site-info {
 .search-form button.search-submit {
 	margin-left: 10px;
 }
+/***************************************************************
+    Mosaique de projets
+/***************************************************************/
+.portfolio h2 {
+	color:var(--noir);	
+}
+.mosaique {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+.mosaique figure {
+	border:solid 1px lightgrey;	
+		flex-basis:300px;
+	position:relative;
+	margin:10px;
+}
+
+.mosaique figure a.lien-img {
+	display:flex;
+	flex-direction:column;	
+}
+
+.mosaique a.lien-img img {
+	object-fit: cover;
+	height:100%;
+	width:100%;
+}
+
+.mosaique figcaption {
+	background:var(--bleu-transparent);
+	color:#fff;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.mosaique figcaption a, .mosaique figcaption .titre {
+	color:#fff;
+	text-decoration: underline;
+	background: none;
+	
+}
+.mosaique .titre {
+	font-size:1.5rem;
+	text-align: center;
+	margin:1rem 0;
+}
+.mosaique .meta {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+.portfolio .meta span {
+	display:flex;
+	align-items: center;
+	margin:0 5px;
+}
+.portfolio .meta span img {
+	margin-right:5px;
+}
+
+
+@media screen and (min-width:910px) {
+	/*Légende masquée*/
+
+.mosaique figcaption {
+	
+		position:absolute;
+		bottom:0;
+		left:0;
+
+		height:0;
+		width:100%;
+		opacity:0;
+		transition: all ease-in-out 1s;
+  }
+	.mosaique figure:hover figcaption, .mosaique figure:focus figcaption {
+		opacity:1;
+		height:100%;
+  }
+	
+  /*Affichage en grille*/
+	@supports(	grid-auto-flow: dense) {
+		.mosaique {
+		display:grid;
+		grid-template-columns : repeat(12,1fr);
+		grid-auto-flow: dense;
+	}
+	.mosaique figure {
+		grid-column: span 4;
+		grid-row: span 4;
+		
+	}
+	
+	.mosaique figure:first-of-type
+	{
+		grid-column: span 8;
+		grid-row: span 8;
+	}
+	}
+	
+	
+	
+}
+
 
 /***************************************************************
     Reutilisable

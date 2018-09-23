@@ -94,13 +94,13 @@ add_action( 'cmb2_admin_init', function() {
 		'id'         => CMB_PREFIX . '_portfolio_date',
 		'type'       => 'text',
 	) );
-
+        /*
 	$cmb_portfolio->add_field( array(
 		'name'       => __( 'Mettre en avant dans les archives', 'cmb2' ),
 		'id'         => CMB_PREFIX . '_portfolio_star',
 		'type'       => 'checkbox',
 		'default'	=> 1,
-    ) );
+    ) );*/
     
     /*
     //https://github.com/alexis-magina/cmb2-field-post-search-ajax/blob/master/example-field-setup.php
@@ -122,3 +122,160 @@ add_action( 'cmb2_admin_init', function() {
 });
 
 
+/***************************************************************
+    Affichage des projets en mosaique 
+/***************************************************************/
+//Fonction qui retourne les métas du projet
+function k_meta_portfolio($ID,$couleur_icone) {
+    $tags = get_the_term_list($ID,'portfolio-tag','',',&ensp;','');
+    $portfolio_url=esc_url(get_post_meta($ID, CMB_PREFIX.'_portfolio_url', true ));
+    ob_start();
+    ?>
+    <p class="meta flex">
+        <?php if(!(empty($tags))):?>
+        <span class="tags">
+            <img src="https://icongr.am/clarity/tags.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Tags"/>
+            <?php echo $tags; ?>
+        </span>
+        <?php endif; ?>
+        <?php if(!(empty($portfolio_url))):?>
+        <span class="url">
+            <img src="https://icongr.am/clarity/link.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Lien"/>
+            <a href="<?php echo $portfolio_url;?>">
+                <?php echo __('Lien du projet','kasutan-new');?>
+            </a>
+        </span>
+        <?php endif; ?>
+    </p>
+    <?php return ob_get_clean();
+}
+//Fonction qui _retourne_ une mosaique - à utiliser dans un shortocde pour la page d'accueil ou _avec un echo_ pour la page d'archive
+
+function k_mosaique_portfolio($nombre_projets) {
+    $args = array(
+		'post_type' => 'portfolio',
+		'posts_per_page'=> $nombre_projets,
+		'order' => 'DESC',
+		'orderby' => 'date',
+    );
+    
+	$k_projets_recents = new WP_Query( $args );
+	
+    ob_start();
+
+	if( $k_projets_recents->have_posts() ) {
+        //Compteur pour afficher une image plus grande dans la mosaique si c'est le premier projet
+        $i=0;
+        echo '<div class="mosaique portfolio">';
+        while ( $k_projets_recents->have_posts() ) : $k_projets_recents->the_post(); 
+            $taille_image = 0==$i ? array(787,787) : array(383,383);
+            ?>
+            <figure tabindex="1">
+                <?php 
+					if ( has_post_thumbnail() ) {
+                        ?>
+                        <a href="<?php the_permalink();?>" class="lien-img">
+                        <?php
+                        the_post_thumbnail($taille_image);
+                        ?>
+                        </a>
+                        <?php
+					}
+                ?>
+                <figcaption>
+                    <a href="<?php the_permalink();?>">
+                    <?php if (is_home()) : ?>
+                        <h3 class="titre"><?php the_title(); ?></h3>
+                    <?php else : ?>
+                        <h2 class="titre"><?php the_title(); ?></h2>
+                    <?php endif; ?>
+                    </a>
+                    <?php echo k_meta_portfolio(get_the_ID(),'ffffff'); ?>
+                </figcaption>
+        <?php
+        $i++;
+		endwhile;
+        echo '</div>';
+	}
+
+	wp_reset_postdata();
+
+	return ob_get_clean();
+}
+
+//Affiche la mosaique avec un shortcode
+//utilisation : [mosaique_portfolio nombre_projets="2"]
+function k_shortcode_mosaique_portfolio($atts) {
+	extract( shortcode_atts( array(    
+		'nombre_projets' => 6,    
+		), $atts) );
+	
+			return k_mosaique_portfolio($nombre_projets) ;
+		}
+		
+add_shortcode( 'mosaique_portfolio', 'k_shortcode_mosaique_portfolio' );
+
+/***************************************************************
+    Affichage des projets en colonne dans la barre latérale
+/***************************************************************/
+function k_widget_portfolio($nombre_projets) {
+    //Si on est sur la page single d'un projet, ne pas afficher le projet dans la barre latérale
+    $exclure = array();
+    if (is_single() && 'portfolio' == get_post_type()) :
+        $exclure[]= get_the_ID();
+    endif;
+    $args = array(
+		'post_type' => 'portfolio',
+		'posts_per_page'=> $nombre_projets,
+		'order' => 'DESC',
+        'orderby' => 'date',
+        'post__not_in' => $exclure,
+    );
+    
+	$k_projets_recents = new WP_Query( $args );
+	
+    ob_start();
+
+	if( $k_projets_recents->have_posts() ) {
+        echo '<div class="portfolio">';
+        while ( $k_projets_recents->have_posts() ) : $k_projets_recents->the_post();
+        ?>
+        <figure>
+                <?php 
+					if ( has_post_thumbnail() ) {
+                        ?>
+                        <a href="<?php the_permalink();?>" class="lien-img">
+                        <?php
+                        the_post_thumbnail('thumbnail');
+                        ?>
+                        </a>
+                        <?php
+					}
+                ?>
+                <figcaption>
+                    <a href="<?php the_permalink();?>">                    
+                        <strong class="titre"><?php the_title(); ?></strong>          
+                    </a>
+                    <?php echo k_meta_portfolio(get_the_ID(),'222222'); ?>
+                </figcaption>
+        <?php
+		endwhile;
+        echo '</div>';
+	}
+
+	wp_reset_postdata();
+
+	return ob_get_clean();
+}
+
+//Affiche le widget avec un shortcode
+//utilisation : [widget_portfolio nombre_projets="2"]
+function k_shortcode_widget_portfolio($atts) {
+	extract( shortcode_atts( array(    
+		'nombre_projets' => 3,    
+		), $atts) );
+	
+			return k_widget_portfolio($nombre_projets) ;
+		}
+		
+add_shortcode( 'widget_portfolio', 'k_shortcode_widget_portfolio' );
