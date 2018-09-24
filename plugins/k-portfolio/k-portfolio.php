@@ -82,17 +82,30 @@ add_action( 'cmb2_admin_init', function() {
 		'show_names'    => true, 
 		'closed'     => false,
 	) );
-
+    $cmb_portfolio->add_field( array(
+		'name'       => __( 'Objectif du projet', 'cmb2' ),
+		'id'         => CMB_PREFIX . '_portfolio_objectif',
+		'type'       => 'text',
+	) );
 	$cmb_portfolio->add_field( array(
 		'name'       => __( 'URL du site live', 'cmb2' ),
 		'id'         => CMB_PREFIX . '_portfolio_url',
 		'type'       => 'text_url',
 	) );
-
+    $cmb_portfolio->add_field( array(
+		'name'       => __( 'Texte du lien', 'cmb2' ),
+		'id'         => CMB_PREFIX . '_portfolio_texte_url',
+		'type'       => 'text',
+	) );
 	$cmb_portfolio->add_field( array(
 		'name'       => __( 'Date', 'cmb2' ),
 		'id'         => CMB_PREFIX . '_portfolio_date',
 		'type'       => 'text',
+    ) );
+    $cmb_portfolio->add_field( array(
+		'name'       => __( 'Note', 'cmb2' ),
+		'id'         => CMB_PREFIX . '_portfolio_note',
+		'type'       => 'textarea',
 	) );
         /*
 	$cmb_portfolio->add_field( array(
@@ -126,24 +139,60 @@ add_action( 'cmb2_admin_init', function() {
     Affichage des projets en mosaique 
 /***************************************************************/
 //Fonction qui retourne les métas du projet
-function k_meta_portfolio($ID,$couleur_icone) {
+function k_meta_portfolio($ID,$couleur_icone,$toutes) {
     $tags = get_the_term_list($ID,'portfolio-tag','',',&ensp;','');
     $portfolio_url=esc_url(get_post_meta($ID, CMB_PREFIX.'_portfolio_url', true ));
+    $portfolio_texte_url=esc_html(get_post_meta($ID, CMB_PREFIX.'_portfolio_texte_url', true ));
+    $date=$objectif=$note='';
+    if($toutes) {
+        $date= esc_html(get_post_meta($ID, CMB_PREFIX.'_portfolio_date', true ));
+        $objectif= esc_html(get_post_meta($ID, CMB_PREFIX.'_portfolio_objectif', true ));
+        $note= esc_html(get_post_meta($ID, CMB_PREFIX.'_portfolio_note', true ));
+    }
+    
+
     ob_start();
     ?>
-    <p class="meta flex">
+    <p class="meta">
+        <?php if(!(empty($date))):?>
+        <span>
+            <img src="https://icongr.am/clarity/calendar.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Date&nbsp;: "/>
+            <?php echo $date; ?>
+        </span>
+        <?php endif; ?>
+        
+        <?php if(!(empty($objectif))):?>
+        <span>
+            <img src="https://icongr.am/clarity/bullseye.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Objectif&nbsp;: "/>
+            <?php echo $objectif; ?>
+        </span>
+        <?php endif; ?>
+        
         <?php if(!(empty($tags))):?>
-        <span class="tags">
-            <img src="https://icongr.am/clarity/tags.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Tags"/>
+        <span>
+            <img src="https://icongr.am/clarity/tags.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Tags&nbsp;: "/>
             <?php echo $tags; ?>
         </span>
         <?php endif; ?>
+        
         <?php if(!(empty($portfolio_url))):?>
-        <span class="url">
-            <img src="https://icongr.am/clarity/link.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Lien"/>
-            <a href="<?php echo $portfolio_url;?>">
-                <?php echo __('Lien du projet','kasutan-new');?>
+        <span>
+            <img src="https://icongr.am/clarity/link.svg?color=<?php echo $couleur_icone;?>&size=24" alt="URL du projet&nbsp;: "/>
+            <a href="<?php echo $portfolio_url;?>" target="_blank">
+                <?php
+                if(!empty($portfolio_texte_url)) {
+                    echo $portfolio_texte_url;
+                } else {
+                    echo __('URL du projet','kasutan');
+                }?>
             </a>
+        </span>
+        <?php endif; ?>
+       
+        <?php if(!(empty($note))):?>
+        <span>
+            <img src="https://icongr.am/clarity/pin.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Note&nbsp;: "/>
+            <?php echo $note; ?>
         </span>
         <?php endif; ?>
     </p>
@@ -168,7 +217,7 @@ function k_mosaique_portfolio($nombre_projets) {
         $i=0;
         echo '<div class="mosaique portfolio">';
         while ( $k_projets_recents->have_posts() ) : $k_projets_recents->the_post(); 
-            $taille_image = 0==$i ? array(787,787) : array(383,383);
+            $taille_image = 0==$i ? 'carre-800' : 'carre-400';
             ?>
             <figure tabindex="1">
                 <?php 
@@ -184,13 +233,13 @@ function k_mosaique_portfolio($nombre_projets) {
                 ?>
                 <figcaption>
                     <a href="<?php the_permalink();?>">
-                    <?php if (is_home()) : ?>
+                    <?php if (is_front_page()) : ?>
                         <h3 class="titre"><?php the_title(); ?></h3>
                     <?php else : ?>
                         <h2 class="titre"><?php the_title(); ?></h2>
                     <?php endif; ?>
                     </a>
-                    <?php echo k_meta_portfolio(get_the_ID(),'ffffff'); ?>
+                    <?php echo k_meta_portfolio(get_the_ID(),'ffffff', false); ?>
                 </figcaption>
         <?php
         $i++;
@@ -256,7 +305,7 @@ function k_widget_portfolio($nombre_projets) {
                     <a href="<?php the_permalink();?>">                    
                         <strong class="titre"><?php the_title(); ?></strong>          
                     </a>
-                    <?php echo k_meta_portfolio(get_the_ID(),'222222'); ?>
+                    <?php echo k_meta_portfolio(get_the_ID(),'222222', false); ?>
                 </figcaption>
         <?php
 		endwhile;

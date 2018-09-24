@@ -30,3 +30,6 @@ function kasutan_copyright($texte) {
 } 
 
 load_theme_textdomain( 'themedd', get_stylesheet_directory() . '/languages' );
+
+add_image_size('carre-800', 800, 800, TRUE);
+add_image_size('carre-400', 400, 400, TRUE);

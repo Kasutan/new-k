@@ -34,10 +34,7 @@ header #site-header-secondary-menu {
 	padding: 0;
 }
 
-.entry-content h2 {
-	color: var(--bleu);
-	font-size: 40px;
-}
+
 
 
 
@@ -129,6 +126,9 @@ button {
 /***************************************************************
     Hero 
 /***************************************************************/
+.home .entry-content h2 {
+	font-size: 40px;
+}
 .hero .ab-container-content {
 	background-image: var(--gradient);
 	display: flex;
@@ -168,6 +168,7 @@ button {
 	font-weight: normal;
 	padding: 0 3px 2px;
 
+	border-radius: 3px;
 }
 
 @media screen and (min-width:768px) {
@@ -179,7 +180,9 @@ button {
 /***************************************************************
     Section nos valeurs / nos engagements 
 /***************************************************************/
-
+.home #valeurs, .home #temoignages {
+	color: var(--bleu);
+}
 .valeur .ab-container-content {
 	display: flex;
 	flex-direction: column;
@@ -230,9 +233,7 @@ button {
 
 }
 
-.qui h2 {
-	color: var(--noir);
-}
+
 
 .entry-content .qui h3 {
 	margin-top: 0;
@@ -327,6 +328,15 @@ Portfolio
 }
 
 /***************************************************************
+    Section Contact 
+/***************************************************************/
+.contact .ab-container-inside {
+	max-width: 800px;
+	margin: auto;
+	padding:3.24rem 20px;
+}
+
+/***************************************************************
     Footer
 /***************************************************************/
 footer .footer-widgets .widget {
@@ -359,9 +369,6 @@ footer .site-info {
 /***************************************************************
     Mosaique de projets
 /***************************************************************/
-.portfolio h2 {
-	color:var(--noir);	
-}
 .mosaique {
 	display:flex;
 	flex-wrap:wrap;
@@ -409,12 +416,12 @@ footer .site-info {
 	flex-wrap:wrap;
 	justify-content: space-around;
 }
-.portfolio .meta span {
+.meta span {
 	display:flex;
 	align-items: center;
 	margin:0 5px;
 }
-.portfolio .meta span img {
+.meta span img {
 	margin-right:5px;
 }
 
@@ -461,8 +468,19 @@ footer .site-info {
 	
 	
 }
+/***************************************************************
+    Page single portfolio
+/***************************************************************/
 
-
+.portfolio-header {
+	display:flex;
+	align-items:center;
+}
+.portfolio-header > img {
+	margin-bottom:20px;
+	margin-right:20px;
+	
+}
 /***************************************************************
     Reutilisable
 /***************************************************************/
