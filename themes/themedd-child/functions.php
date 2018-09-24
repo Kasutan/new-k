@@ -18,15 +18,15 @@ function themedd_parent_theme_enqueue_styles() {
 		get_stylesheet_directory_uri() . '/style.css',
 		array( 'themedd-style' )
 	);
-	wp_register_script('themedd-child-scripts',get_stylesheet_directory_uri() . '/scripts.js',array('jquery'),'1.4.1',true );
-	wp_enqueue_script('themedd-child-scripts');
+	//wp_register_script('themedd-child-scripts',get_stylesheet_directory_uri() . '/scripts.js',array('jquery'),'1.4.1',true );
+	//wp_enqueue_script('themedd-child-scripts');
 
 }
 
 apply_filters( 'themedd_copyright', '<p>' . sprintf( __( 'Copyright &copy; %s %s', 'themedd' ), date( 'Y' ), get_bloginfo( 'name' ) ) . '</p>' );
 add_filter('themedd_copyright', 'kasutan_copyright', 10,1);
 function kasutan_copyright($texte) {
-	return '<p>&copy; <a href="https://kasutan.pro" target="_blank">Kasutan</a> '.date('Y').'</p>';
+	return '<p>&copy; <a href="https://kasutan.pro" target="_blank">Kasutan</a> 2015-'.date('Y').'. Un site construit avec WordPress et Gutenberg</p>';
 } 
 
 load_theme_textdomain( 'themedd', get_stylesheet_directory() . '/languages' );
