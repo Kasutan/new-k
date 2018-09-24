@@ -243,6 +243,10 @@ button {
 	border-radius: 50%;
 }
 
+.qui .wp-block-columns {
+	flex-wrap:wrap;
+}
+
 .wp-block-column {
 	display: flex;
 	flex-direction: column;
@@ -342,13 +346,15 @@ Portfolio
 footer .footer-widgets .widget {
 	margin-bottom: 0;
 }
-
+.footer-widgets {
+	background: var(--gris);
+}
 footer .site-info {
-	padding-top: 0;
+	padding-top: 1rem;
 }
 
 /***************************************************************
-    Formulaire de reccherche
+    Formulaire de recherche
 /***************************************************************/
 
 .search-form {
