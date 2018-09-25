@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: Themedd\n"
 "POT-Creation-Date: 2018-01-04 20:37+1300\n"
-"PO-Revision-Date: 2018-08-30 17:48+0200\n"
+"PO-Revision-Date: 2018-09-25 09:54+0100\n"
 "Language-Team: support@easydigitaldownloads.com\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -989,19 +989,19 @@ msgstr ""
 
 #: single.php:36
 msgid "Next"
-msgstr ""
+msgstr "Suivant"
 
 #: single.php:37
 msgid "Next post:"
-msgstr ""
+msgstr "Article suivant&nbsp;:"
 
 #: single.php:39
 msgid "Previous"
-msgstr ""
+msgstr "Précédent"
 
 #: single.php:40
 msgid "Previous post:"
-msgstr ""
+msgstr "Article précédent&nbsp;:"
 
 #: template-parts/biography.php:27
 msgid "About the author:"
