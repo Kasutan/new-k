@@ -54,9 +54,16 @@ function k_register_portfolio_post_type() {
             array( 'core/quote', array(
                 'placeholder' => 'Témoignage',
             ) ),
+            array( 'core/paragraph', array(
+                'placeholder' => 'Nom du client',
+                'align'    => 'right',
+            ) ),
             array( 'core/gallery', array(
                 'placeholder' => 'Galerie',
-                
+                'columns'   => 1,
+                'align' => 'center',
+                'imageCrop' => false,
+                'linkTo'    => 'file'
             ) ),
         ),
     );
@@ -161,20 +168,6 @@ function k_meta_portfolio($ID,$couleur_icone,$toutes) {
         </span>
         <?php endif; ?>
         
-        <?php if(!(empty($objectif))):?>
-        <span>
-            <img src="https://icongr.am/clarity/bullseye.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Objectif&nbsp;: "/>
-            <?php echo $objectif; ?>
-        </span>
-        <?php endif; ?>
-        
-        <?php if(!(empty($tags))):?>
-        <span>
-            <img src="https://icongr.am/clarity/tags.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Tags&nbsp;: "/>
-            <?php echo $tags; ?>
-        </span>
-        <?php endif; ?>
-        
         <?php if(!(empty($portfolio_url))):?>
         <span>
             <img src="https://icongr.am/clarity/link.svg?color=<?php echo $couleur_icone;?>&size=24" alt="URL du projet&nbsp;: "/>
@@ -188,6 +181,21 @@ function k_meta_portfolio($ID,$couleur_icone,$toutes) {
             </a>
         </span>
         <?php endif; ?>
+
+        <?php if(!(empty($objectif))):?>
+        <span class="objectif">
+            <img src="https://icongr.am/clarity/bullseye.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Objectif&nbsp;: "/>
+            <?php echo $objectif; ?>
+        </span>
+        <?php endif; ?>
+        
+        <?php if(!(empty($tags))):?>
+        <span class="etiquettes">
+            <img src="https://icongr.am/clarity/tags.svg?color=<?php echo $couleur_icone;?>&size=24" alt="Tags&nbsp;: "/>
+            <?php echo $tags; ?>
+        </span>
+        <?php endif; ?>
+        
        
         <?php if(!(empty($note))):?>
         <span>
@@ -241,6 +249,7 @@ function k_mosaique_portfolio($nombre_projets) {
                     </a>
                     <?php echo k_meta_portfolio(get_the_ID(),'ffffff', false); ?>
                 </figcaption>
+            </figure>
         <?php
         $i++;
 		endwhile;

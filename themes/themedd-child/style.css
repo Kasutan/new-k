@@ -70,6 +70,9 @@ hr.gradient {
     background-color: var(--violet) ;
     color: inherit; 
 }
+.wp-block-image a, .wp-block-image a:focus, .wp-block-image a:active {
+	background: none;
+}
 a.bouton {
 	color: #fff;
 	/*background:var(--violet);*/
@@ -427,9 +430,16 @@ footer .site-info {
 	align-items: center;
 	margin:0 5px;
 }
+.meta span.etiquettes {
+	flex-wrap:wrap;
+}
+.meta span.objectif {
+	line-height: 1.3;
+}
 .meta span img {
 	margin-right:5px;
 }
+
 
 
 @media screen and (min-width:910px) {
@@ -482,10 +492,27 @@ footer .site-info {
 	display:flex;
 	align-items:center;
 }
+@media screen and (max-width:550px) {
+	.portfolio-header {
+	flex-wrap: wrap;
+		justify-content: center;
+}
+}
 .portfolio-header > img {
 	margin-bottom:20px;
 	margin-right:20px;
 	
+}
+
+.wp-block-gallery .blocks-gallery-item {
+	border:solid 1px var(--gris);
+	border-bottom-color:var(--bleu);
+	border-bottom-width:2px;
+	
+	margin-bottom:40px;
+}
+.post-navigation  .nav-links a{
+	display: inline-block;
 }
 /***************************************************************
     Reutilisable
