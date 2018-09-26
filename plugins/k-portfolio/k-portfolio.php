@@ -227,11 +227,11 @@ function k_mosaique_portfolio($nombre_projets) {
         while ( $k_projets_recents->have_posts() ) : $k_projets_recents->the_post(); 
             $taille_image = 0==$i ? 'carre-800' : 'carre-400';
             ?>
-            <figure tabindex="1">
+            <figure tabindex="0">
                 <?php 
 					if ( has_post_thumbnail() ) {
                         ?>
-                        <a href="<?php the_permalink();?>" class="lien-img">
+                        <a href="<?php the_permalink();?>" class="lien-img" aria-label="Voir les détails du projet <?php the_title();?>">
                         <?php
                         the_post_thumbnail($taille_image);
                         ?>
