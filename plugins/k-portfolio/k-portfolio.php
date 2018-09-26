@@ -208,13 +208,23 @@ function k_meta_portfolio($ID,$couleur_icone,$toutes) {
 }
 //Fonction qui _retourne_ une mosaique - à utiliser dans un shortocde pour la page d'accueil ou _avec un echo_ pour la page d'archive
 
-function k_mosaique_portfolio($nombre_projets) {
+function k_mosaique_portfolio($nombre_projets, $tax_slug='aucune') {
     $args = array(
 		'post_type' => 'portfolio',
 		'posts_per_page'=> $nombre_projets,
 		'order' => 'DESC',
 		'orderby' => 'date',
     );
+    //Limiter les résultats de la requête si on a passé un slug de custom tag en argument
+    if($tax_slug!='aucune') {
+        $args['tax_query'] = array(
+            array(
+            'taxonomy' => 'portfolio-tag',
+            'field' => 'slug',
+            'terms' => $tax_slug)
+            );
+    }
+    
     
 	$k_projets_recents = new WP_Query( $args );
 	
