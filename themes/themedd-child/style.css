@@ -34,10 +34,6 @@ header #site-header-secondary-menu {
 	padding: 0;
 }
 
-
-
-
-
 .entry-content h2+h3 {
 	margin-top: 0;
 }
@@ -542,25 +538,8 @@ footer .site-info {
 	color:inherit;
 }
 /***************************************************************
-    Reutilisable
+    Résultats de recherche
 /***************************************************************/
-.grille {
-	display: flex;
-	justify-content: center;
-	align-items: stretch;
-	flex-wrap: wrap;
-}
-
-.grille>div {
-	flex-basis: 100%;
-	margin: 30px 0;
-}
-
-@media screen and (min-width:768px) {
-	.grille>div {
-		flex-basis: 500px;
-		flex-grow: 0;
-		margin: 30px 10px;
-
-	}
+.search-results .posted-on {
+	display:none;
 }
