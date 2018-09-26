@@ -164,35 +164,35 @@ function k_meta_portfolio($ID,$couleur_icone,$toutes) {
     <p class="meta">
         <?php if(!(empty($date))):?>
         <span>
-            <img src="https://icongr.am/clarity/calendar.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" alt="Date&nbsp;: "/>
+            <img src="https://icongr.am/clarity/calendar.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" height="24" width="24" alt="Date&nbsp;: "/>
             <?php echo $date; ?>
         </span>
         <?php endif; ?>
         
         <?php if(!(empty($objectif))):?>
         <span class="objectif">
-            <img src="https://icongr.am/clarity/bullseye.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" alt="Objectif&nbsp;: "/>
+            <img src="https://icongr.am/clarity/bullseye.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" height="24" width="24"  alt="Objectif&nbsp;: "/>
             <?php echo $objectif; ?>
         </span>
         <?php endif; ?>
         
         <?php if(!(empty($tags))):?>
         <span class="etiquettes">
-            <img src="https://icongr.am/clarity/tags.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" alt="Tags&nbsp;: "/>
+            <img src="https://icongr.am/clarity/tags.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" height="24" width="24"  alt="Tags&nbsp;: "/>
             <?php echo $tags; ?>
         </span>
         <?php endif; ?>     
        
         <?php if(!(empty($note))):?>
         <span>
-            <img src="https://icongr.am/clarity/pin.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" alt="Note&nbsp;: "/>
+            <img src="https://icongr.am/clarity/pin.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" height="24" width="24"  alt="Note&nbsp;: "/>
             <?php echo $note; ?>
         </span>
         <?php endif; ?>
         
         <?php if(!(empty($portfolio_url))):?>
         <span>
-            <img src="https://icongr.am/clarity/link.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" alt="URL du projet&nbsp;: "/>
+            <img src="https://icongr.am/clarity/link.svg?size=24&color=<?php echo $couleur_icone;?>&size=24" height="24" width="24"  alt="URL du projet&nbsp;: "/>
             <a href="<?php echo $portfolio_url;?>" target="_blank">
                 <?php
                 if(!empty($portfolio_texte_url)) {
