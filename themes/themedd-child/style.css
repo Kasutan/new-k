@@ -9,17 +9,18 @@ Version:        2.0
 */
 body {
 	overflow-x: hidden;
+	/* Variables remplacées pour IE
 	--gris: #f4f4fa;
 	--bleu: #6161FF;
 	--violet: #CE9FFC;
 	--gradient: linear-gradient(135deg, #CE9FFC 5%, #6161FF 100%);
 	--noir: #222222;
-	--bleu-transparent : rgba(97,97,255,0.9);
-
+	*/
 }
 
 header .site-title {
 	font-size: 1.5rem;
+	text-align: left;
 }
 
 header #site-header-secondary-menu {
@@ -41,7 +42,7 @@ header #site-header-secondary-menu {
 hr.gradient {
 	border-bottom: 0;
 	height: 5px;
-	background: var(--gradient);
+	background: linear-gradient(135deg, #CE9FFC 5%, #6161FF 100%);
 	max-width: 800px;
 	margin: auto;
 }
@@ -50,20 +51,20 @@ hr.gradient {
     Boutons et liens
 /***************************************************************/
 #site-header-secondary-menu a:focus {
-	color:var(--bleu);
+	color:#6161FF;
 }
 .entry-content a {
   color: inherit;
   outline: none;
   text-decoration: none;
   transition: all .2s ease-out;
-  background: linear-gradient(var(--violet), var(--violet));
+  background: linear-gradient(#CE9FFC, #CE9FFC);
   background-size: 100% .2em;
   background-repeat: no-repeat;
   background-position: left 0 bottom 0;
 }
 .entry-content a:focus, .entry-content a:active {
-    background-color: var(--violet) ;
+    background-color: #CE9FFC ;
     color: inherit; 
 }
 .wp-block-image a, .wp-block-image a:focus, .wp-block-image a:active {
@@ -71,7 +72,7 @@ hr.gradient {
 }
 a.bouton {
 	color: #fff;
-	background:var(--bleu);
+	background:#6161FF;
 	/*background: linear-gradient(135deg, #CE9FFC 30%, #6161FF 100%);*/
 
 	display: block;
@@ -80,7 +81,6 @@ a.bouton {
 	margin: auto;
 	text-align: center;
 	font-size: 1.2em;
-	font-weight: bold;
 	transition-duration: 0.5s;
 }
 
@@ -89,12 +89,12 @@ a.bouton:focus,
 a.bouton:visited,
 a.bouton:active {
 	color: #fff;
-	background: var(--violet);
+	background: #CE9FFC;
 	/*background: linear-gradient(135deg, #CE9FFC 50%, #6161FF 100%); */
 	outline:none !important;
 }
 a.bouton:focus {
-	border:solid 1px var(--noir);
+	border:solid 1px #222222;
 }
 
 button {
@@ -128,9 +128,10 @@ button {
 /***************************************************************/
 .home .entry-content h2 {
 	font-size: 40px;
+	outline:none;
 }
 .hero .ab-container-content {
-	background-image: var(--gradient);
+	background-image: linear-gradient(135deg, #CE9FFC 5%, #6161FF 100%);
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -180,7 +181,7 @@ button {
     Section nos valeurs / nos engagements 
 /***************************************************************/
 .home #valeurs, .home #temoignages {
-	color: var(--bleu);
+	color: #6161FF;
 }
 .valeur .ab-container-content {
 	display: flex;
@@ -199,7 +200,7 @@ button {
 
 }
 .valeur h3 {
-	color: var(--bleu);
+	color: #6161FF;
 }
 .valeur:nth-of-type(2n+1) .ab-container-content {
 	background: #6161FF;
@@ -230,7 +231,7 @@ button {
     Section qui sommes-nous 
 /***************************************************************/
 .qui .ab-container-inside {
-	background-color: var(--gris);
+	background-color: #f4f4fa;
 	padding: 3.24rem 20px;
 
 }
@@ -263,6 +264,11 @@ button {
 	padding: 0 6%;
 }
 
+.wp-block-column p {
+	/*Pour IE*/
+	max-width:100%;
+}
+
 .wp-block-column figure {
 	max-width: 200px;
 }
@@ -278,7 +284,7 @@ button {
 }
 .social a:focus {
 	background:none;
-	outline:solid 1px var(--noir);
+	outline:solid 1px #222222;
 }
 
 /***************************************************************
@@ -296,7 +302,7 @@ button {
 }
 
 .temoignage blockquote {
-	border-left-color: var(--gris);
+	border-left-color: #f4f4fa;
 }
 
 button.gauche,
@@ -319,7 +325,7 @@ button.droite {
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
-		background-color: var(--gris);
+		background-color: #f4f4fa;
 		border-width: 0px !important;
 		color: initial;
 		transition: all linear 0.8s;
@@ -356,7 +362,7 @@ footer .footer-widgets .widget {
 	margin-bottom: 0;
 }
 .footer-widgets {
-	background: var(--gris);
+	background: #f4f4fa;
 }
 footer .site-info {
 	padding-top: 1rem;
@@ -392,13 +398,14 @@ footer .site-info {
 	margin:auto;
 }
 .mosaique figure {
-	border:solid 1px lightgrey;	
 		flex-basis:300px;
 	position:relative;
 	margin:10px;
 }
 
 .mosaique figure a.lien-img {
+	border:solid 1px lightgrey;	
+
 	display:flex;
 	flex-direction:column;	
 }
@@ -410,7 +417,7 @@ footer .site-info {
 }
 
 .mosaique figcaption {
-	background:var(--bleu);
+	background:#6161FF;
 	color:#fff;
 	display:flex;
 	flex-direction:column;
@@ -429,7 +436,8 @@ footer .site-info {
 }
 .mosaique figcaption a:focus {
 	background: none;
-	text-decoration: underline wavy;
+	text-decoration: none;
+	outline: solid 1px #fff;
 }
 
 .mosaique .titre {
@@ -441,11 +449,13 @@ footer .site-info {
 	display:flex;
 	justify-content: space-around;
 	flex-direction: column;
+	max-width:100%; /*Pour IE*/
 }
 .meta span {
 	display:flex;
 	align-items: center;
 	margin:0 5px;
+	max-width:100%; /*Pour IE*/
 }
 .meta span.etiquettes {
 	flex-wrap:wrap;
@@ -459,30 +469,37 @@ footer .site-info {
 	margin-right:5px;
 }
 
-
+@media screen and (max-width:767px) {
+	/*N'afficher que 3 projets en mobile*/
+	.home .mosaique figure:nth-of-type(4),
+	.home .mosaique figure:nth-of-type(5),
+	.home .mosaique figure:nth-of-type(6){
+		display:none;
+	}
+}
 
 @media screen and (min-width:910px) {
-	/*Légende masquée*/
-
-.mosaique figcaption {
-	
-		position:absolute;
-		bottom:0;
-		left:0;
-
-		height:0;
-		width:100%;
-		opacity:0;
-		transition: all ease-in-out 1s;
-		padding: 5px;
-  }
-	.mosaique figure:hover figcaption, .mosaique figure:focus figcaption, .mosaique figure:focus-within figcaption {
-		opacity:1;
-		height:100%;
-  }
-	
-  /*Affichage en grille*/
+	/*Légende masquée - uniquement sur navigateurs modernes*/
+ 
 	@supports(	grid-auto-flow: dense) {
+		.mosaique figcaption {
+	
+			position:absolute;
+			bottom:0;
+			left:0;
+	
+			height:0;
+			width:100%;
+			opacity:0;
+			transition: all ease-in-out 1s;
+			padding: 5px;
+	  }
+		.mosaique figure:hover figcaption, .mosaique figure:focus figcaption, .mosaique figure:focus-within figcaption {
+			opacity:1;
+			height:100%;
+	  }
+
+		 /*Affichage en grille*/
 		.mosaique {
 		display:grid;
 		grid-template-columns : repeat(12,1fr);
@@ -525,8 +542,8 @@ footer .site-info {
 }
 
 .wp-block-gallery .blocks-gallery-item {
-	border:solid 1px var(--gris);
-	border-bottom-color:var(--bleu);
+	border:solid 1px #f4f4fa;
+	border-bottom-color:#6161FF;
 	border-bottom-width:2px;
 	
 	margin-bottom:40px;
