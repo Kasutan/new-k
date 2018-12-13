@@ -554,6 +554,10 @@ footer .site-info {
 .post-navigation span.meta-nav  {
 	color:inherit;
 }
+
+/*Fix Gutenberg Gallery https://github.com/WordPress/gutenberg/issues/10150#issuecomment-446321766 */
+/*Pre-iOS 11 Flexbox bug due to absence of parent or child height property*/
+.wp-block-gallery .blocks-gallery-image figure, .wp-block-gallery .blocks-gallery-item figure { height: auto; }
 /***************************************************************
     Résultats de recherche
 /***************************************************************/
