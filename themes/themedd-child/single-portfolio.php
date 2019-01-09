@@ -24,7 +24,7 @@ themedd_page_header();
 						the_post_thumbnail('medium');
 					}
 					if(function_exists('k_meta_portfolio')) {
-						echo k_meta_portfolio(get_the_ID(),'CE9FFC',$afficher_toutes_les_metas=true);
+						echo k_meta_portfolio(get_the_ID(),'13547a',$afficher_toutes_les_metas=true);
 					}?>
 				</header>
 				<?php

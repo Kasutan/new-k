@@ -11,9 +11,14 @@ body {
 	overflow-x: hidden;
 	/* Variables remplacées pour IE
 	--gris: #f4f4fa;
+	--gris-teinte: #f8fbfc;
 	--bleu: #6161FF;
+	--primaire:#13547a;
+	--primaire-hover:#509aa5;
 	--violet: #CE9FFC;
+	--secondaire: #80d0c7;
 	--gradient: linear-gradient(135deg, #CE9FFC 5%, #6161FF 100%);
+	--gradient: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 	--noir: #222222;
 	*/
 }
@@ -42,7 +47,7 @@ header #site-header-secondary-menu {
 hr.gradient {
 	border-bottom: 0;
 	height: 5px;
-	background: linear-gradient(135deg, #CE9FFC 5%, #6161FF 100%);
+	background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 	max-width: 800px;
 	margin: auto;
 }
@@ -51,29 +56,28 @@ hr.gradient {
     Boutons et liens
 /***************************************************************/
 #site-header-secondary-menu a:focus {
-	color:#6161FF;
+	color:#13547a;
 }
 .entry-content a {
   color: inherit;
   outline: none;
   text-decoration: none;
   transition: all .2s ease-out;
-  background: linear-gradient(#CE9FFC, #CE9FFC);
+  background: linear-gradient(#509aa5, #509aa5);
   background-size: 100% .2em;
   background-repeat: no-repeat;
   background-position: left 0 bottom 0;
 }
 .entry-content a:focus, .entry-content a:active {
-    background-color: #CE9FFC ;
-    color: inherit; 
+    background-color: #509aa5 ;
+    color: #fff; 
 }
 .wp-block-image a, .wp-block-image a:focus, .wp-block-image a:active {
 	background: none;
 }
 a.bouton {
 	color: #fff;
-	background:#6161FF;
-	/*background: linear-gradient(135deg, #CE9FFC 30%, #6161FF 100%);*/
+	background:#13547a;
 
 	display: block;
 	padding: 20px;
@@ -89,8 +93,7 @@ a.bouton:focus,
 a.bouton:visited,
 a.bouton:active {
 	color: #fff;
-	background: #CE9FFC;
-	/*background: linear-gradient(135deg, #CE9FFC 50%, #6161FF 100%); */
+	background: #509aa5;
 	outline:none !important;
 }
 a.bouton:focus {
@@ -116,7 +119,7 @@ button {
 .entry-content .wp-block-column li:before {
 	content: ' ';
 	display: inline-block;
-	background-image: url('https://icongr.am/clarity/circle.svg?size=12&color=6161FF');
+	background-image: url('https://icongr.am/clarity/circle.svg?size=12&color=13547a');
 	background-repeat: none;
 	width: 12px;
 	height: 12px;
@@ -131,7 +134,7 @@ button {
 	outline:none;
 }
 .hero .ab-container-content {
-	background-image: linear-gradient(135deg, #CE9FFC 5%, #6161FF 100%);
+	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -162,14 +165,6 @@ button {
 	font-size: 1.2em;
 }
 
-.hero strong {
-	background-color: #fff;
-	border-radius: 3px;
-	color: #66F;
-	font-size: 0.9em;
-	font-weight: 600;
-	padding: 0 3px 2px;
-}
 
 @media screen and (min-width:768px) {
 	.hero img {
@@ -181,7 +176,7 @@ button {
     Section nos valeurs / nos engagements 
 /***************************************************************/
 .home #valeurs, .home #temoignages {
-	color: #6161FF;
+	color: #13547a;
 }
 .valeur .ab-container-content {
 	display: flex;
@@ -200,10 +195,10 @@ button {
 
 }
 .valeur h3 {
-	color: #6161FF;
+	color: #13547a;
 }
 .valeur:nth-of-type(2n+1) .ab-container-content {
-	background: #6161FF;
+	background: #13547a;
 	color: #fff;
 	font-weight:normal;
 }
@@ -231,7 +226,7 @@ button {
     Section qui sommes-nous 
 /***************************************************************/
 .qui .ab-container-inside {
-	background-color: #f4f4fa;
+	background-color: #f8fbfc;
 	padding: 3.24rem 20px;
 
 }
@@ -302,7 +297,7 @@ button {
 }
 
 .temoignage blockquote {
-	border-left-color: #f4f4fa;
+	border-left-color: #f8fbfc;
 }
 
 button.gauche,
@@ -325,7 +320,7 @@ button.droite {
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
-		background-color: #f4f4fa;
+		background-color: #f8fbfc;
 		border-width: 0px !important;
 		color: initial;
 		transition: all linear 0.8s;
@@ -362,7 +357,7 @@ footer .footer-widgets .widget {
 	margin-bottom: 0;
 }
 .footer-widgets {
-	background: #f4f4fa;
+	background: #f8fbfc;
 }
 footer .site-info {
 	padding-top: 1rem;
@@ -417,7 +412,7 @@ footer .site-info {
 }
 
 .mosaique figcaption {
-	background:#6161FF;
+	background:#13547a;
 	color:#fff;
 	display:flex;
 	flex-direction:column;
@@ -542,8 +537,8 @@ footer .site-info {
 }
 
 .wp-block-gallery .blocks-gallery-item {
-	border:solid 1px #f4f4fa;
-	border-bottom-color:#6161FF;
+	border:solid 1px #f8fbfc;
+	border-bottom-color:#13547a;
 	border-bottom-width:2px;
 	
 	margin-bottom:40px;
