@@ -135,6 +135,7 @@ button {
 }
 .hero .ab-container-content {
 	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+	border-radius:5px;
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -144,7 +145,11 @@ button {
 	position: relative;
 	padding: 20px 10px;
 }
-
+@media screen and (min-width:600px) {
+	.hero .ab-container-content {
+		border-radius:11% 21% 16% 19% / 27% 28% 23% 31%;
+	}
+}
 .hero h2 {
 	flex-basis: 70%;
 }
