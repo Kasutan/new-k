@@ -310,6 +310,24 @@ button.droite {
 	display: none;
 }
 
+.temoignages .siema {
+	text-align: center;
+}
+button.dot, button.dot:hover, button.dot:focus {
+	color:transparent;
+	background:#fff;
+	border-radius:50%;
+	border: solid 2px #509aa5;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
+button.dot.current {
+	background:#509aa5;
+}
+
 @media screen and (min-width:768px) {
 	.temoignages {
 		position: relative;
@@ -386,6 +404,14 @@ footer .site-info {
 
 .search-form button.search-submit {
 	margin-left: 10px;
+}
+
+#secondary .search-form {
+	margin-top:0;
+}
+
+#secondary .search-form input.search-field {
+	border:solid 1px lightgrey;
 }
 /***************************************************************
     Mosaique de projets
@@ -524,7 +550,15 @@ footer .site-info {
 /***************************************************************
     Page single portfolio
 /***************************************************************/
+.single-portfolio .site-header-main {
+	border-bottom: solid 2px #f5f5f5;
+}
 
+.single-portfolio .entry-content {
+	border-right: 2px solid #f5f5f5;
+	padding:20px;
+	margin-bottom:20px;
+}
 .portfolio-header {
 	display:flex;
 	align-items:center;
@@ -541,6 +575,9 @@ footer .site-info {
 	
 }
 
+.entry-content ul.wp-block-gallery {
+	margin-left:0;
+}
 .wp-block-gallery .blocks-gallery-item {
 	border:solid 1px #f8fbfc;
 	border-bottom-color:#13547a;
@@ -553,6 +590,12 @@ footer .site-info {
 }
 .post-navigation span.meta-nav  {
 	color:inherit;
+}
+
+#primary-sidebar .widget {
+
+	padding-top: 0;
+
 }
 
 /*Fix Gutenberg Gallery https://github.com/WordPress/gutenberg/issues/10150#issuecomment-446321766 */
