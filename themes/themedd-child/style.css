@@ -373,6 +373,45 @@ Portfolio
 	padding:3.24rem 20px;
 }
 
+.contact .forminator-ui#forminator-module-1166.forminator-design--default .forminator-label,
+.contact .forminator-ui#forminator-module-1166.forminator-design--default .forminator-radio {
+	font-size: 1rem;
+}
+
+#textarea-1 .forminator-field {
+	display: flex;
+	flex-direction: column;
+}
+
+#textarea-1 .forminator-field label {
+	order:1;
+}
+
+#textarea-1 .forminator-field .forminator-description {
+	order:2;
+}
+.forminator-ui.forminator-custom-form[data-design="default"] #textarea-1 .forminator-field .forminator-description {
+	margin: 0 0 5px;
+
+}
+#textarea-1 .forminator-field textarea {
+	order:3;
+}
+
+#textarea-1 .forminator-field .forminator-error-message {
+	order:4;
+}
+
+
+.forminator-row-last .forminator-field {
+	text-align: center;
+}
+
+.contact .forminator-ui#forminator-module-1166.forminator-design--default .forminator-button-submit {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
 /***************************************************************
     Footer
 /***************************************************************/
